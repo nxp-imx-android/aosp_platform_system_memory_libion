@@ -20,11 +20,14 @@
 #define _UAPI_LINUX_ION_H
 #include <linux/ioctl.h>
 #include <linux/types.h>
+// hardcode the unmapped heap id. Need to modify this value if kernel changed.
+#define UNMAPPED_HEAP_ID 9
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 typedef int ion_user_handle_t;
 enum ion_heap_type {
  ION_HEAP_TYPE_SYSTEM = 0,
  ION_HEAP_TYPE_DMA = 2,
+ ION_HEAP_TYPE_UNMAPPED = 5,
  ION_HEAP_TYPE_CUSTOM = 16,
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
  ION_NUM_HEAPS = 31,
